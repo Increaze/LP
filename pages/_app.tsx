@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <main className="flex flex-col w-screen min-h-screen overflow-x-hidden">
       <Head>
-        <title>NextLyte</title>
+        <title>LP</title>
         <link rel="icon" href="/images/logo.svg" />
         <link
           href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;800&display=swap"
