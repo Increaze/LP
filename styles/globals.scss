@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+    scroll-behavior: smooth;
+    background-color: white;
+  }
+  
+body {
+    font-family: 'Satoshi', sans-serif;
+  }
+  
+.container {
+    @apply mx-auto max-w-7xl mbl:px-5;
+  }
+
+.debug-css {
+    outline: 2px solid green;
+    & * {
+      outline: 1px solid red;
+    }
+  }
+  
+  @layer components {
+    .title {
+      font-family: "PP Neue Machina Plain", san-serif;
+    }
+    .sortMill{
+      font-family: "Sorts Mill Goudy", serif;
+      // font-weight: 400;
+      // font-style: italic;
+      
+    }
+    // .satoshi-italic{
+    //   font-family: 'Satoshi-VariableItalic';
+    // }
+    // .satoshi-regular{
+    //   font-family: 'Satoshi-Regular';
+    // }
+    .bullet {
+      @apply relative pl-[20px];
+      &::before {
+        content: "";
+        @apply h-2.5 w-2.5 bg-main-2 block rounded-full absolute left-0 top-3.5 -translate-y-1/2;
+      }
+    }
+    .custom-container {
+      @apply max-w-[1440px] mx-auto px-16;
+    }
+    .section-title {
+      @apply title text-[50px] relative pl-[25px];
+  
+      &::before {
+        content: "";
+        // @apply h-3.5 w-3.5 bg-main-2 block rounded-full absolute left-0 top-1/2 -translate-y-1/2;
+      }
+    }
+  
+    .recent-works {
+      --card-full-height: 623px;
+      --card-short-height: 503px;
+      @apply grid grid-cols-2 grid-flow-row-dense gap-x-[34px] gap-y-[53px];
+      .work-card {
+        height: var(--card-full-height);
+        @apply relative p-8 border-2 overflow-hidden border-gray rounded-[32px] bg-gray;
+  
+        img.workImage {
+          @apply absolute right-0 bottom-0 object-contain w-[90%];
+        }
+      }
+      .work-card:nth-child(2n) {
+        top: calc(-1 * (var(--card-full-height) - var(--card-short-height)));
+      }
+      .work-card:nth-child(2),
+      .work-card:nth-last-child(2) {
+        height: var(--card-short-height);
+        @apply top-0;
+        img.workImage {
+          @apply absolute right-0 bottom-0 object-contain w-[75%];
+        }
+      }
+    }
+  
+    .gradient-bullet {
+      background: linear-gradient(
+        180deg,
+        #1abcfe 13.33%,
+        rgba(252, 194, 50, 0.56) 100%
+      );
+    }
+    .gradient-bullet-two {
+      background: linear-gradient(
+        180deg,
+        #A3390B
+        13.33%,
+        rgba(252, 194, 50, 0.56) 100%
+      );
+    }
+  
+    .gradient-text {
+      background: linear-gradient(
+        180deg,
+        #1abcfe 66.15%,
+        rgba(252, 194, 50, 0.56) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  
+    .gradient-button {
+      background: linear-gradient(134.06deg, #818181 3.42%, #272727 103.21%);
+    }
+  
+    .btn {
+      @apply bg-[#2D2D2D] text-white text-lg font-extrabold px-7 py-2.5 title rounded-[9px];
+    }
+  }
+  
