@@ -15,7 +15,6 @@ const Veedez = () => {
       <Image className="container" src={veedez} alt={""} />
       <AboutVeedez />
       <TheProcess />
-     
       <Footer/>
     </section>
   );
