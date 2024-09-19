@@ -1,0 +1,145 @@
+import userPersonaOne from "../../public/images/userPersonaOne.png";
+import userPersonaTwo from "../../public/images/userPersonaTwo.png";
+import swotAnalysis from "../../public/images/swotAnalysis.png";
+import userFlow from "../../public/images/userFlow.png";
+
+import Image from "next/image";
+
+export default function AboutVeedez() {
+  return (
+    <section className="mt-12 space-y-8">
+      <section className=" flex flex-col justify-center px-48 ">
+        <h1 className="text-[40px]">Veedez</h1>
+        <p className="text-[#625D6F] text-lg">
+          Veedez is a complete business solution that helps manage inventory,
+          sales, invoicing, and payments. It offers secure payment options,
+          including card, online, and cardless withdrawals, and provides instant
+          loans for MSMEs. VeedezPro allows real-time tracking, sales analytics,
+          customer management, and payroll handling. Larger businesses can
+          benefit from the Enterprise Plan with advanced features and
+          customisation. Veedez is ideal for businesses of all sizes, from
+          freelancers to retailers.
+        </p>
+        <div className=" space-y-6">
+          <div>
+            <h3 className="text-lg font-bold">My Role</h3>
+            <p className="text-lg">
+              I developed the design system for both the first and second
+              versions of this project and played a key role in crafting the
+              OAuth integration, bill payment flow, and money transfer
+              processes. Additionally, I ensured seamless collaboration across
+              the team and contributed to enhancing the scalability of the
+              design system.
+            </p>
+          </div>
+          <div className="">
+            <h3 className="text-lg font-bold">Team</h3>
+            <p className="text-lg">
+              Lateef Akinyemi (Me), Deborah, Ayodeji, Toluwalase
+            </p>
+          </div>
+        </div>
+        <section className="flex justify-between mt-6">
+          {veedezProduct.map((product) => (
+            <article key={product.title} className="">
+              <h4 className="text-lg font-extrabold">{product.title}</h4>
+
+              {product.icon ? (
+                <div className="flex gap-2 items-center">
+                  <img
+                    className="h-4 w-4"
+                    src={`/icons/${product.icon}.svg`}
+                    alt=""
+                  />
+                  <a
+                    href={product.link}
+                    className=" text-la-black2 underline cursor-pointer"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    {product.text}
+                  </a>
+                </div>
+              ) : (
+                <a className=" text-la-black2">{product.text}</a>
+              )}
+            </article>
+          ))}
+        </section>
+        <div className="pt-12 ">
+          <h3 className="text-5xl font-bold mb-2">Veedez (V1) Component </h3>
+          <p className="text-lg text-[#625D6F]">
+            In the early stages of this project, I introduced a glassmorphism
+            icon set, which was later refined and applied throughout the
+            application. I also selected a clean, sans-serif typeface to enhance
+            visual communication on digital screens, ensuring the colors met
+            accessibility standards.
+          </p>
+        </div>
+      </section>
+      <div className="pb-6 container">
+        <img
+          src="/images/veedezcomp.png
+"
+          alt=""
+        />
+      </div>
+      <section>
+        <div className="px-48 mt-10">
+          <h3 className="text-5xl font-bold mb-2">Research & Insight</h3>
+          <p className="text-lg text-[#625D6F]">
+            We conducted user interviews to validate our problem-solving idea.
+            <br /> The goal of design research is to shape the design process
+            from the end user's perspective. While I, as an average Nigerian,
+            can empathize with the problem, it’s essential that design decisions
+            reflect the user’s view.
+            <br /> We started by asking, "Who will be using our product?" and
+            "Who is our target audience?" Research in Nigeria shows that the
+            <br />
+            largest group of internet users falls between the ages of 18-60,
+            covering Gen Z, Millennials, and Gen X. This group includes
+            <br /> students, workers, and some retirees, with the majority of
+            users fitting within this age range.
+            <br /> Our focus will be on micro-business owners and older users,
+            as they are most likely to be our primary target audience.
+            <br /> Meet Rhoda, Mama Femi, and Mr. Frances...
+          </p>
+        </div>
+      </section>
+      <div className="container">
+        <img src="/images/pain-point.png" alt="" />
+      </div>
+    </section>
+  );
+}
+
+const veedezProduct: Array<{
+  title: string;
+  icon?: string;
+  text: string;
+  link?: string;
+}> = [
+  {
+    title: "Timeline",
+    icon: "",
+    text: "Aug 2023 - Ongoing",
+  },
+  {
+    title: "Visit Project (V1 Formerly Alerzopay)",
+    icon: "link",
+    text: "https://veedezpay.com",
+    link: "https://veedezpay.com",
+  },
+  {
+    title: "Visit Project (V2 - Veedez Pro)",
+    icon: "link",
+    text: "https://veedez.com",
+    link: "https://veedezpay.com",
+  },
+  {
+    title: "Appstore",
+    icon: "link",
+    text: "IOS",
+    link: "https://apps.apple.com/ng/app/veedez/id1600437976",
+  },
+];

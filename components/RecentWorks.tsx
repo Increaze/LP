@@ -49,7 +49,7 @@ const recent_works: Array<{
     name: "Veedez",
     short: "Saas, Payment",
     image: "veedezpng.png",
-    link: "https://veedez.com/",
+    link: "/projects/veedez",
   },
   {
     name: "Jeetar",

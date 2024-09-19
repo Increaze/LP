@@ -4,7 +4,6 @@ import swotAnalysis from "../../public/images/swotAnalysis.png";
 import userFlow from "../../public/images/userFlow.png";
 
 import Image from "next/image";
-import { use } from "react";
 
 export default function Definition() {
   return (
