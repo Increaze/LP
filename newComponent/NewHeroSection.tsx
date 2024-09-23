@@ -3,14 +3,14 @@ import { Constants } from "../constants";
 
 export default function NewHeroSection() {
   return (
-    <section className="container mb-20">
-      <section className="flex justify-between">
-        <div className="flex flex-col text-black p-6 border border-lp-gray3 bg-lp-gray3 flex-1 ">
+    <section className="container">
+      <section className="flex justify-between gap-6">
+        <div className="flex flex-col text-black p-6 border border-lp-gray3 bg-lp-gray3 flex-1 rounded-2xl  w-[792px]">
           <div className="space-y-6">
-            <h1 className="text-4xl leading-[1.36] font-bold ">
+            <h1 className="text-[40px] font-bold ">
               Hey, I’m Lateef a product designer with 7 years of Experience
             </h1>
-            <p className="w-full">
+            <p className="max-w-[630px]">
               I’m a digital product designer who thrives on challenges and is
               driven by the opportunity to create digital experiences that make
               everyday life more human and enjoyable.
@@ -37,7 +37,7 @@ export default function NewHeroSection() {
               <a href={Constants.linkedinLink}>
                 <img
                   src="/icons/linkedin.svg"
-                  className="object-contain w-5"
+                  className=""
                   alt="linkedin"
                 />
               </a>
@@ -52,19 +52,19 @@ export default function NewHeroSection() {
         </div>
 
         {/* Image Section */}
-        <div className="flex flex-1 items-center justify-center w-2/6">
-          <img src="/images/profile.jpg" alt="Lateef" className="object-cover" />
+        <div className="max-w-[513px]">
+          <img src="/images/profile.jpg" alt="Lateef" className="" />
         </div>
       </section>
-      {/* <div className="flex flex-col justify-center mt-10">
+      <div className="flex flex-col justify-center mt-10">
         <p className="text-sm font-medium text-center">
           Mentoring & Membership
         </p>
         <div className="flex gap-16 justify-center mt-4 ">
-          <img src="/icons/adplist.svg" alt="adp" />
+          <img src="/icons/adp.svg" alt="adp" />
           <img src="/icons/foundation.svg" alt="foundation" />
         </div>
-      </div> */}
+      </div>
     </section>
   );
 }

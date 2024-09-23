@@ -1,10 +1,10 @@
 export const Experience = () => {
   return (
-    <section id="experience" className="my-12 pb-20 container">
+    <section id="experience" className="mt-12 mb-20 container">
       <h2 className="text-[32px] font-semibold leading-[56px] mb-4">
         Experiences
       </h2>
-      <section className="grid items-start justify-evenly grid-cols-3 mbl:grid-cols-1 gap-16 mbl:gap-8">
+      <section className="grid items-start justify-evenly grid-cols-3 mbl:grid-cols-1 gap-8 mbl:gap-8">
         {experiences.map((exp, expIndex) => (
           <article key={exp.company + expIndex} className="mb-6">
             <h4 className="text-[32px] font-extrabold ">{exp.company}</h4>

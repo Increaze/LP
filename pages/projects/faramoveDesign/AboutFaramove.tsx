@@ -1,6 +1,3 @@
-import swotAnalysis from "../../public/images/swotAnalysis.png";
-import userFlow from "../../public/images/userFlow.png";
-import Image from "next/image";
 
 export default function AboutFaramove() {
   return (
@@ -33,6 +30,38 @@ export default function AboutFaramove() {
               (Animator), Olawole (3D designer){" "}
             </p>
           </div>
+          <section className="grid grid-cols-4 gap-6 gap-y-4 mt-6">
+            {faraProduct.map((product, index) => (
+              <article
+                key={product.title}
+                className={`flex flex-col ${
+                  index < 4 ? "col-span-1" : "col-span-2"
+                }`}
+              >
+                <h4 className="text-lg font-extrabold">{product.title}</h4>
+
+                {product.icon ? (
+                  <div className="flex gap-2 items-center">
+                    <img
+                      className="h-4 w-4"
+                      src={`/icons/${product.icon}.svg`}
+                      alt=""
+                    />
+                    <a
+                      href={product.link}
+                      className=" text-la-black2 underline cursor-pointer"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      {product.text}
+                    </a>
+                  </div>
+                ) : (
+                  <a className="text-la-black2">{product.text}</a>
+                )}
+              </article>
+            ))}
+          </section>
         </div>
       </section>
 

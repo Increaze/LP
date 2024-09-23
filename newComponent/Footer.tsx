@@ -16,7 +16,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="pb-20 fixed">
+    <footer className="pb-20 bg-la-gray4">
       <section className="flex flex-col flex-1 justify-center">
         <h5 className="text-5xl text-la-gray3 text-center font-medium container">
           Want to reach out about a project, collaboration or just want to say a
@@ -62,3 +62,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+

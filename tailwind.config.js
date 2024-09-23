@@ -3,6 +3,7 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+    './newComponent/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
@@ -33,12 +34,19 @@ module.exports = {
           gray:"#EEEEEE",
           bdgray :"#F5F5F5",
           gray2:"#595959",
-          gray3: "#6E6E73"
+          gray3: "#6E6E73",
+          gray4: "#FAFAFA"
+
 
         },
+      
       },
       boxShadow:{
         mile: "0px 0px 9px rgba(0, 0, 0, 0.1)"
+
+      },
+      backgroundImage:{
+        lpBg:"linear-gradient(179.9deg, rgba(0, 0, 0, 0) 18.23%, rgba(0, 0, 0, 0.46) 60.96%, rgba(0, 0, 0, 0.46) 69.96%, rgba(0, 0, 0, 0.46) 83.95%, rgba(0, 0, 0, 0.46) 99.92%)"
       }
     },
     
