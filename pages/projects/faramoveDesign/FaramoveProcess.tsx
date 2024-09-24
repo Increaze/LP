@@ -85,7 +85,9 @@ export default function FaramoveProcess() {
       <div className="px-4 pt-12 pb-20 relative">
         <h1 className="text-[48px] font-medium">Next Project</h1>
         <div className="relative group">
-          <img className="" src="/images/jeet.png" alt="" />
+          <Link href={"/projects/jeetar"} className="cursor-pointer">
+            <img className="" src="/images/jeet.png" alt="" />
+          </Link>
           <div className="absolute top-1/2 left-0 w-full h-[26px] bg-la-blue/90 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 ease-in-out origin-left -translate-y-1/2"></div>
         </div>
       </div>

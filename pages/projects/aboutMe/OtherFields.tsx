@@ -15,7 +15,7 @@ export default function OtherFields() {
         <img src="/images/tools.png" alt="" />
       </div>
       <div className="">
-        <img src="/images/experience.png" alt="" />
+        <img src="/images/exp-image.png" alt="" />
       </div>
     </section>
   );

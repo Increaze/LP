@@ -96,8 +96,10 @@ export default function TheProcess() {
       <div className="px-4 pt-12 pb-20 relative">
         <h1 className="text-[48px] font-medium">Next Project</h1>
         <div className="relative group">
-          <img className="" src="/icons/fara.svg" alt="" />
-          <div className="absolute top-1/2 left-0 w-full h-[26px] bg-la-blue/90 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 ease-in-out origin-left -translate-y-1/2"></div>
+          <Link href={"/projects/faramove"} className="cursor-pointer">
+            <img className="" src="/icons/fara.svg" alt="" />
+          </Link>
+          <div className="absolute top-1/2 left-0 w-full h-[26px] bg-lp-blue/90 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 ease-in-out origin-left -translate-y-1/2"></div>
         </div>
       </div>
     </section>

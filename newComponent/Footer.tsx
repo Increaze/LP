@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 
-export default function Footer(): JSX.Element {
+export default function Footer() {
   const [currentTime, setCurrentTime] = useState<string>("");
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function Footer(): JSX.Element {
   }, []);
 
   const scrollToTop = (): void => {
-    const scrollTarget = document.getElementById("main");
+    const scrollTarget = document.querySelector("#__next > main");
     if (scrollTarget) {
       scrollTarget.scrollTo({
         top: 0,
@@ -23,7 +23,6 @@ export default function Footer(): JSX.Element {
       });
     }
   };
-  console.log("clicked", scrollToTop);
 
   return (
     <footer className="py-20 bg-la-gray4">
@@ -43,7 +42,7 @@ export default function Footer(): JSX.Element {
       </div>
       <div className="flex justify-between flex-1 mt-14 container">
         <div className="flex gap-1">
-          <span>Lagos, NG</span> | <span>{currentTime}</span>
+          <span>Lagos, NG</span> |<span>{currentTime}</span>
         </div>
         <div className="flex gap-10">
           <a
@@ -63,7 +62,6 @@ export default function Footer(): JSX.Element {
             CV
           </a>
         </div>
-        {/* Back to top button */}
         <button
           onClick={scrollToTop}
           className="cursor-pointer underline bg-transparent border-none text-left p-0"

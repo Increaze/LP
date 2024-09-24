@@ -3,18 +3,16 @@ import Link from "next/link";
 export default function Projects() {
   return (
     <section className="container mt-12">
-      <h1 className="font-bold text-4xl my-6">Select Projects</h1>
+      <h1 className="font-bold text-4xl my-6">Selected Projects</h1>
       <div className="flex flex-col space-y-12 items-start text-xl">
         {projectImages.map((image) => (
           <div className="relative" key={image.img}>
-            {/* Only render a Link if there is a valid link */}
             <Link href={image.link} passHref>
               <img
                 src={`/images/${image.img}`}
                 alt={image.img}
                 className="cursor-pointer transform transition duration-300 ease-in-out hover:scale-105 hover:opacity-40"
               />
-
               <div className="opacity-0 hover:opacity-100 absolute inset-0 bg-lpBg rounded-3xl">
                 <span className="text-[50px] text-white bottom-20 absolute left-[52px] font-semibold">
                   {image.title}
