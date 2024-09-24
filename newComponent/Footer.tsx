@@ -1,19 +1,29 @@
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 
-export default function Footer() {
-  const [currentTime, setCurrentTime] = useState("");
+export default function Footer(): JSX.Element {
+  const [currentTime, setCurrentTime] = useState<string>("");
 
-  // Update time on the client side
   useEffect(() => {
     const updateTime = () => {
       setCurrentTime(dayjs().format("hh:mm:ss A"));
     };
-    updateTime(); // Initial time update
+    updateTime();
     const intervalId = setInterval(updateTime, 1000); // Update every second
 
     return () => clearInterval(intervalId); // Cleanup on component unmount
   }, []);
+
+  const scrollToTop = (): void => {
+    const scrollTarget = document.getElementById("main");
+    if (scrollTarget) {
+      scrollTarget.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+  console.log("clicked", scrollToTop);
 
   return (
     <footer className="py-20 bg-la-gray4">
@@ -23,11 +33,13 @@ export default function Footer() {
           friendly hello👋🏾?
         </h5>
         <div className="flex gap-3 items-center justify-center mt-5">
-          <span className="font-medium text-[80px] title">Pixifinger1@gmail.com</span>
+          <span className="font-medium text-[80px] title">
+            Pixifinger1@gmail.com
+          </span>
         </div>
       </section>
       <div>
-        <img src="/images/FooterLogo.png" alt="" />
+        <img src="/images/FooterLogo.png" alt="Footer Logo" />
       </div>
       <div className="flex justify-between flex-1 mt-14 container">
         <div className="flex gap-1">
@@ -44,23 +56,21 @@ export default function Footer() {
           </a>
           <a
             className="underline"
-            href="https://drive.google.com/file/d/1V5nftyU-bQy7viv2GlpqI7guhf284DBH/view"
+            href="https://drive.google.com/file/d/1nE-t_HTGFtPLxGkBtvdw6l5p5P892UTG/view?usp=sharing"
             target="_blank"
             rel="noreferrer noopener"
           >
             CV
           </a>
         </div>
-        <a
-          href="/
-        "
-          className="cursor-pointer"
+        {/* Back to top button */}
+        <button
+          onClick={scrollToTop}
+          className="cursor-pointer underline bg-transparent border-none text-left p-0"
         >
           Back to top☝🏾☝🏾☝🏾︎
-        </a>
+        </button>
       </div>
     </footer>
   );
 }
-
-

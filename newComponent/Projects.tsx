@@ -6,30 +6,27 @@ export default function Projects() {
       <h1 className="font-bold text-4xl my-6">Select Projects</h1>
       <div className="flex flex-col space-y-12 items-start text-xl">
         {projectImages.map((image) => (
-          <div className="relative ">
-            <Link key={image.img} href={""} passHref>
+          <div className="relative" key={image.img}>
+            {/* Only render a Link if there is a valid link */}
+            <Link href={image.link} passHref>
               <img
                 src={`/images/${image.img}`}
                 alt={image.img}
                 className="cursor-pointer transform transition duration-300 ease-in-out hover:scale-105 hover:opacity-40"
               />
+
+              <div className="opacity-0 hover:opacity-100 absolute inset-0 bg-lpBg rounded-3xl">
+                <span className="text-[50px] text-white bottom-20 absolute left-[52px] font-semibold">
+                  {image.title}
+                </span>
+                <p className="text-[24px] text-white bottom-10 absolute left-[52px] font-light">
+                  {image.text}
+                </p>
+                <a className="absolute border rounded-3xl px-3 py-2 text-white text-[24px] border-white bottom-10 right-[52px] cursor-pointer">
+                  {image.subText}
+                </a>
+              </div>
             </Link>
-            <div className="opacity-0 hover:opacity-100 absolute inset-0 bg-lpBg rounded-3xl">
-              <span className="text-[50px] text-white bottom-20 absolute left-[52px] font-semibold">
-                {image.title}
-              </span>
-              <p className="text-[24px] text-white bottom-10 absolute left-[52px] font-light">
-                {image.text}
-              </p>
-              <a
-                href={image.link}
-                rel="noreferrer noopener"
-                className="absolute border rounded-3xl px-3 py-2 text-white text-[24px] border-white bottom-10 right-[52px] cursor-pointer"
-              >
-                {image.subText}
-              </a>
-              <a />
-            </div>
           </div>
         ))}
       </div>
@@ -39,7 +36,7 @@ export default function Projects() {
 
 const projectImages: Array<{
   img: string;
-  link?: string;
+  link: string;
   title?: string;
   text?: string;
   subText: string;
@@ -70,5 +67,6 @@ const projectImages: Array<{
     title: "Alerzoshop",
     text: "B2B E-commerce",
     subText: "Case study -Coming Soon",
+    link: "", // No link for this one
   },
 ];

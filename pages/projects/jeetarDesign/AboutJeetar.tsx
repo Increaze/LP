@@ -165,7 +165,7 @@ const jeetarProduct: Array<{
     title: "Website",
     icon: "link",
     text: "https://Jeetar.com",
-    link: "https://Jeetar.com",
+    link: "https://jeetar-ea.vercel.app/",
   },
   {
     title: "Twitter(X)",
