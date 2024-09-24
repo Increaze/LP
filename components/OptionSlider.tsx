@@ -8,7 +8,7 @@ export const OptionSlider = () => {
         height={700}
         width={500}
         gap={0}
-        duration={70}
+        duration={40}
         slides={images.map((image, index) => (
           <div key={image}>
             <img src={image} className="h-full w-full" />
@@ -23,6 +23,4 @@ const images = [
   "/images/option-step-two.png",
   "/images/option-step-three.png",
   "/images/option-step-four.png",
-
- 
 ];

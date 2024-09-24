@@ -8,7 +8,7 @@ export const TransferSlider = () => {
         height={700}
         width={500}
         gap={0}
-        duration={70}
+        duration={40}
         slides={images.map((image, index) => (
           <div key={image}>
             <img src={image} className="h-full w-full" />

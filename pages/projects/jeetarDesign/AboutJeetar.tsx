@@ -1,7 +1,7 @@
 export default function AboutJeetar() {
   return (
-    <section className="mt-12 space-y-8 debug-css">
-      <section className="flex flex-col justify-center px-48 mb-4  space-y-8">
+    <section className="mt-12 space-y-8">
+      <section className="flex flex-col justify-center px-48 mb-4">
         <Title
           text="Jeetar"
           subText=" A super app that provides on-demand delivery services for groceries,
@@ -13,7 +13,7 @@ export default function AboutJeetar() {
           real-time."
         />
         <div className=" space-y-6">
-          <div>
+          <div className="mt-4">
             <h3 className="text-lg font-bold">My Role</h3>
             <p className="text-lg">
               This was a project under Alerzo which is mainly to target D2C
@@ -62,7 +62,7 @@ export default function AboutJeetar() {
         </div>
       </section>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col space-y-4">
         <div className="px-48">
           <Title
             text="Brand Assets"
@@ -80,8 +80,8 @@ export default function AboutJeetar() {
         />
       </div>
 
-      <section>
-        <div className=" mt-10 px-48">
+      <section className="">
+        <div className="px-48">
           <Title
             text="The Problem"
             subText="Homes, colleges, and similar settings often face the constant
@@ -97,7 +97,7 @@ export default function AboutJeetar() {
         </div>
       </section>
       <section>
-        <div className="px-48 mt-10">
+        <div className="px-48">
           <Title
             text="The Solution"
             subText=" 20-minute delivery grocery app should prioritize a user-friendly
@@ -110,7 +110,7 @@ export default function AboutJeetar() {
         </div>
       </section>
       <section>
-        <div className="px-48 mt-10">
+        <div className="px-48">
           <Title
             text="Research & Insight"
             subText=" Efficient logistics, freight forwarding, supply chain financing, and
@@ -178,7 +178,7 @@ const jeetarProduct: Array<{
 const Title = ({ text, subText }: { text?: string; subText?: string }) => {
   return (
     <div>
-      <h1 className="text-[48px] title font-extrabol mb-4">{text}</h1>
+      <h1 className="text-[48px] title font-extrabold">{text}</h1>
       <p className="text-lg">{subText}</p>
     </div>
   );

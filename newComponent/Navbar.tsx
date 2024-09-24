@@ -15,13 +15,18 @@ export default function NavBar() {
         </div>
 
         <div className="flex justify-between gap-5 ml-auto font-semibold text-black">
-          <Link href="/" >
+          <Link href="/">
             <span>Home</span>
           </Link>
-          <a href={Constants.resumeLink} className="" rel="noreferrer noopener" target="_blank">
+          <a
+            href={Constants.resumeLink}
+            className=""
+            rel="noreferrer noopener"
+            target="_blank"
+          >
             <span>Resume</span>
           </a>
-          <Link href="/projects/AboutUs">
+          <Link href="/projects/about-me">
             <span>About</span>
           </Link>{" "}
           <a href="">

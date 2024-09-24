@@ -60,7 +60,7 @@ const projectImages: Array<{
   },
   {
     img: "Jeeatar.png",
-    link: "/projects/newJeetar",
+    link: "/projects/jeetar",
     title: "Jeetar",
     text: "Super App",
     subText: "Case study",
