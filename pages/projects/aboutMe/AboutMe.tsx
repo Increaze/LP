@@ -1,25 +1,24 @@
 import Link from "next/link";
 import React from "react";
-import { Constants } from "../../../constants";
 import Image from "next/image";
 
 export default function AboutMe() {
   return (
-    <section className="flex mx-14 rounded-[32px] px-10 justify-between items-start border border-lp-gray3 bg-lp-gray3 container">
-      <section className="flex flex-col text-black pt-10 space-y-5">
-        <h1 className="text-[40px] font-extrabold ">Lateef Akinyemi </h1>
-        <p className="text-[32px]">Product Designer</p>
-        <div className="flex gap-5 items-start text-xl ">
+    <section className="flex mx-14 rounded-[32px] px-10 justify-between items-start border border-la-gray4 bg-la-gray4 container">
+      <section className="flex flex-col text-black py-10">
+        <h1 className="text-[40px] font-extrabold mb-2">Lateef Akinyemi </h1>
+        <p className="text-[32px] mb-4">Product Designer</p>
+        <div className="flex gap-5 items-start text-xl mb-8">
           {skillSet.map((skill) => (
             <p
               key={skill.text}
-              className="text-black px-4 py-2 mr-6 text-xs rounded-full border border-la-gray2"
+              className="text-black px-4 py-2 mr-6 text-xs rounded-full border border-la-bdgray bg-la-bdgray"
             >
               {skill.text}
             </p>
           ))}
         </div>
-        <p className="text-lg font-normal max-w-[620px]">
+        <p className="text-lg font-normal max-w-[620px] mb-8">
           I’m a product and computational designer, excels in creating scalable
           design systems and compelling products. My journey spans Alerzo's
           successful Alerzoshop launch, 80% user retention at Alerzo - Jeetar,
@@ -28,13 +27,15 @@ export default function AboutMe() {
           product design expertise.
         </p>
 
-        <div className="flex items-center gap-5 mt-auto  mbl:flex-col mbl:gap-2 mbl:mt-14">
-          <Link
-            href="/"
+        <div className="flex items-center gap-5 mt-auto   mbl:flex-col mbl:gap-2 mbl:mt-14">
+          <a
+            href="mailto:Pixifinger1@gmail.com"
+            rel="noreferrer noopener"
+            target="_blank"
             className="text-white px-4 py-2 rounded-full border border-black bg-black font-medium"
           >
-            <span>Contact me</span>
-          </Link>
+            Contact me
+          </a>
           <div className="flex items-center gap-5">
             {SocialLinks.map((link) => (
               <a

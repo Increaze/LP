@@ -9,7 +9,7 @@ html {
   }
   
 body {
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Regola', sans-serif;
   }
   
 .container {
@@ -25,20 +25,10 @@ body {
   
   @layer components {
     .title {
-      font-family: "PP Neue Machina Plain", san-serif;
+      font-family: "Roobert", serif;
     }
-    .sortMill{
-      font-family: "Sorts Mill Goudy", serif;
-      // font-weight: 400;
-      // font-style: italic;
-      
-    }
-    // .satoshi-italic{
-    //   font-family: 'Satoshi-VariableItalic';
-    // }
-    // .satoshi-regular{
-    //   font-family: 'Satoshi-Regular';
-    // }
+
+
     .bullet {
       @apply relative pl-[20px];
       &::before {

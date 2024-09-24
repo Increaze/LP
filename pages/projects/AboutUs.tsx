@@ -15,10 +15,8 @@ const AboutUs = () => {
       <Navbar />
       <AboutMe />
       <OtherFields />
-      <div className="bg-la-gray4 pt-20">
       <Footer />
 
-      </div>
     </section>
   );
 };

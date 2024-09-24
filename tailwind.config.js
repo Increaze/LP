@@ -28,6 +28,7 @@ module.exports = {
           deepblack:"#031323",
         },
         la:{
+          blue:"#007BFF",
           black: "#202123",
           black2:"#090A0B",
           lightblue:"#0FAFF0",

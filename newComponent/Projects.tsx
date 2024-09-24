@@ -16,19 +16,17 @@ export default function Projects() {
             </Link>
             <div className="opacity-0 hover:opacity-100 absolute inset-0 bg-lpBg rounded-3xl">
               <span className="text-[50px] text-white bottom-20 absolute left-[52px] font-semibold">
-                {image.text}
+                {image.title}
               </span>
               <p className="text-[24px] text-white bottom-10 absolute left-[52px] font-light">
-                {image.subText}
+                {image.text}
               </p>
               <a
                 href={image.link}
                 rel="noreferrer noopener"
-                className="absolute  border rounded-3xl px-3 py-2 text-white text-[24px] border-white bottom-10 right-[52px]
-            cursor-pointer
-            "
+                className="absolute border rounded-3xl px-3 py-2 text-white text-[24px] border-white bottom-10 right-[52px] cursor-pointer"
               >
-                Case Study
+                {image.subText}
               </a>
               <a />
             </div>
@@ -39,27 +37,38 @@ export default function Projects() {
   );
 }
 
-const projectImages = [
+const projectImages: Array<{
+  img: string;
+  link?: string;
+  title?: string;
+  text?: string;
+  subText: string;
+}> = [
   {
     img: "Veedez.png",
     link: "/projects/veedez",
-    text: "Veedez Pay",
-    subText: "Neobank",
+    title: "Veedez Pay",
+    text: "Neobank",
+    subText: "Case study",
   },
   {
     img: "Fara.png",
-    link: "/projects/newFaramove",
-    text: "Faramove",
-    subText: "Cheap Logistic",
+    link: "/projects/faramove",
+    title: "Faramove",
+    text: "Cheap Logistic",
+    subText: "Case study",
   },
   {
     img: "Jeeatar.png",
     link: "/projects/newJeetar",
-    text: "Jeetar",
-    subText: "Super App",
+    title: "Jeetar",
+    text: "Super App",
+    subText: "Case study",
   },
   {
     img: "Alerzoshop.png",
-    link: "/projects/alerzoshop", // Add appropriate page link
+    title: "Alerzoshop",
+    text: "B2B E-commerce",
+    subText: "Case study -Coming Soon",
   },
 ];

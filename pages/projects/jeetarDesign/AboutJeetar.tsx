@@ -1,21 +1,17 @@
-import swotAnalysis from "../../public/images/swotAnalysis.png";
-import userFlow from "../../public/images/userFlow.png";
-import Image from "next/image";
-
 export default function AboutJeetar() {
   return (
-    <section className="mt-12 space-y-8">
-      <section className="flex flex-col justify-center it px-48">
-        <h1 className="text-[40px]">Jeetar</h1>
-        <p className="text-[#625D6F] text-lg">
-          A super app that provides on-demand delivery services for groceries,
+    <section className="mt-12 space-y-8 debug-css">
+      <section className="flex flex-col justify-center px-48 mb-4  space-y-8">
+        <Title
+          text="Jeetar"
+          subText=" A super app that provides on-demand delivery services for groceries,
           with very fast delivery timeframes between 20 minutes or less. When
           you need groceries or snacks, Jeetar makes it simple and convenient to
           obtain what you need, when you need it. Jeetar's user-friendly design
           and streamlined ordering process make it simple to explore a large
           range of products, place your orders, and monitor your delivery in
-          real-time.
-        </p>
+          real-time."
+        />
         <div className=" space-y-6">
           <div>
             <h3 className="text-lg font-bold">My Role</h3>
@@ -66,20 +62,17 @@ export default function AboutJeetar() {
         </div>
       </section>
 
-      <div className="flex flex-col space-y-4 ">
+      <div className="flex flex-col">
         <div className="px-48">
-          <Title text="Brand Assets" />
-
-          <p className="text-lg">
-            In the early stage of this project i introduced a glassmorphism icon
+          <Title
+            text="Brand Assets"
+            subText=" In the early stage of this project i introduced a glassmorphism icon
             set which was later enhanced across the application, i also
             introduced the typeface picking a very stragith sans serif typecae
             to help communicate well visually on digital screens, also the
-            colors met accessibility standards.
-          </p>
+            colors met accessibility standards."
+          />
         </div>
-
-        {/* <img className="container" src="/images/brandAssets.png" alt={""} /> */}
         <img
           src="/images/jeetar-brand-identity.png"
           alt=""
@@ -89,9 +82,9 @@ export default function AboutJeetar() {
 
       <section>
         <div className=" mt-10 px-48">
-          <h3 className="text-5xl font-bold mb-2">The Problem</h3>
-          <p className="text-lg text-[#625D6F]">
-            Homes, colleges, and similar settings often face the constant
+          <Title
+            text="The Problem"
+            subText="Homes, colleges, and similar settings often face the constant
             challenge of needing something but lacking the means to obtain it,
             whether due to limited access, late hours, or sheer convenience;
             Jeetar solves this by delivering whatever you need in 20 minutes or
@@ -99,28 +92,28 @@ export default function AboutJeetar() {
             plagued by traffic, insecurity, and counterfeit products, leaving
             users frustrated with delivery delays, high prices, and unreliable
             products. Given the large B2C e-commerce market, there's a
-            significant opportunity to address these pain points.
-          </p>
+            significant opportunity to address these pain points."
+          />
         </div>
       </section>
       <section>
         <div className="px-48 mt-10">
-          <h3 className="text-5xl font-bold mb-2">The Solution</h3>
-          <p className="text-lg text-[#625D6F]">
-            20-minute delivery grocery app should prioritize a user-friendly
+          <Title
+            text="The Solution"
+            subText=" 20-minute delivery grocery app should prioritize a user-friendly
             interface for seamless navigation, provide efficient delivery to
             save users the time and effort of physical shopping, and offer a
             wide range of fresh products, addressing common challenges like
             complicated apps, time-consuming trips, and concerns about product
-            availability and freshness.
-          </p>
+            availability and freshness."
+          />
         </div>
       </section>
       <section>
         <div className="px-48 mt-10">
-          <h3 className="text-5xl font-bold mb-2">Research & Insight</h3>
-          <p className="text-lg text-[#625D6F]">
-            Efficient logistics, freight forwarding, supply chain financing, and
+          <Title
+            text="Research & Insight"
+            subText=" Efficient logistics, freight forwarding, supply chain financing, and
             customs brokerage are crucial for moving goods across borders, yet
             they face significant challenges due to historical, economic,
             technological, and geopolitical factors. Before embarking on this
@@ -129,28 +122,27 @@ export default function AboutJeetar() {
             courier service market, focusing on understanding user perspectives
             and the industry's current issues. This groundwork helped me uncover
             the key dynamics contributing to these logistics and freight
-            problems.
-          </p>
+            problems."
+          />
         </div>
       </section>
       <section>
-        <div className="px-48 mt-10">
+        <div className="mt-10">
           <h3 className="text-5xl font-bold mb-2  text-center">
             {" "}
             Competitors - Comparing Existing Competitors
           </h3>
-          <p className="text-lg text-[#625D6F]">
+          <p className="text-lg px-48 ">
             In collaboration with the Project Manager, competitive analysis of
             similar platforms was conducted. This research confirmed Jeetar’s
             strong potential to offer a unique value proposition in the market.{" "}
           </p>
         </div>
         <div className="mt-8 container">
-            <img src="/images/competitor.png" alt="" />
+          <img src="/images/competitor.png" alt="" />
         </div>
       </section>
 
-      
       <div className="container">
         <img src="/images/swot-analysis.png" alt="" />
       </div>
@@ -183,6 +175,11 @@ const jeetarProduct: Array<{
   },
 ];
 
-const Title = ({ text }: { text: string }) => {
-  return <h5 className="mb-5 text-5xl font-extrabold">{text}</h5>;
+const Title = ({ text, subText }: { text?: string; subText?: string }) => {
+  return (
+    <div>
+      <h1 className="text-[48px] title font-extrabol mb-4">{text}</h1>
+      <p className="text-lg">{subText}</p>
+    </div>
+  );
 };

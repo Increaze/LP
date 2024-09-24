@@ -6,7 +6,7 @@ import { Footer } from "../../components/Footer";
 const Jeetar: NextPage = () => {
   return (
     <main className="container">
-      <Navbar/>
+      <Navbar />
       <section>
         <img
           src="/images/jeetar-project.png"
@@ -184,7 +184,7 @@ const Jeetar: NextPage = () => {
           className="block w-full mt-8"
         />
       </section>
-      <Footer/>
+      <Footer />
     </main>
   );
 };

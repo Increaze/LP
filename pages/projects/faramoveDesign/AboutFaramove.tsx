@@ -1,18 +1,18 @@
-
 export default function AboutFaramove() {
   return (
     <section className="mt-12 space-y-8">
-      <section className="flex flex-col justify-center it px-48">
-        <h1 className="text-[40px]">Faramove</h1>
-        <p className="text-[#625D6F] text-lg">
-          Faramove aims to revolutionise the logistics and freight forwarding
+      <section className="flex flex-col justify-center mb-4 px-48 space-y-8">
+        <Title
+          text="Faramove"
+          subText=" Faramove aims to revolutionise the logistics and freight forwarding
           industry by addressing key challenges faced by businesses in
           transporting goods across states, countries, and international
           borders. Leveraging cutting-edge technology, this platform streamlines
           the entire process, ensuring swift and efficient transportation of
           goods. With seamless automation, users experience a user-friendly
-          interface, simplifying the logistics experience
-        </p>
+          interface, simplifying the logistics experience"
+        />
+
         <div className=" space-y-6">
           <div>
             <h3 className="text-lg font-bold">My Role</h3>
@@ -70,23 +70,21 @@ export default function AboutFaramove() {
       </div>
       <div className="flex flex-col space-y-4 ">
         <div className="px-48">
-          <h3 className="text-5xl text-[#16063E] font-semibold ">
-            Brand Assets
-          </h3>
-          <p className="text-lg">
-            These are few brand asset i led the creative on and added my
-            contributions to.
-          </p>
+          <Title
+            text="  Brand Assets"
+            subText="  These are few brand asset i led the creative on and added my
+            contributions to."
+          />
         </div>
 
         <img className="container" src="/images/brandAssets.png" alt={""} />
       </div>
 
       <section>
-        <div className=" mt-10 px-48">
-          <h3 className="text-5xl font-bold mb-2">The Problem</h3>
-          <p className="text-lg text-[#625D6F]">
-            In today's global marketplace, the transportation of goods faces
+        <div className="mt-10 px-48">
+          <Title
+            text="The Problem"
+            subText="In today's global marketplace, the transportation of goods faces
             myriad challenges, including inefficiencies, delays, and financial
             constraints. Despite technological advancements, businesses struggle
             with navigating complex logistics systems and managing payments,
@@ -99,15 +97,15 @@ export default function AboutFaramove() {
             financing options, empowering users to navigate the global supply
             chain with confidence. Faramove seeks to redefine logistics,
             providing a user-friendly experience that transcends traditional
-            boundaries.
-          </p>
+            boundaries."
+          />
         </div>
       </section>
       <section>
         <div className="px-48 mt-10">
-          <h3 className="text-5xl font-bold mb-2">The Solution</h3>
-          <p className="text-lg text-[#625D6F]">
-            Our collaborative brainstorming sessions yielded a wealth of
+          <Title
+            text="The Solution"
+            subText="Our collaborative brainstorming sessions yielded a wealth of
             innovative solutions that directly addressed our users' challenges.
             This user-centred approach fostered deeper empathy for their needs,
             preferences, and frustrations. It also ensured our solutions aligned
@@ -115,15 +113,15 @@ export default function AboutFaramove() {
             process, we refined our initial ideas, prioritising the most
             impactful strategies. Tight deadlines necessitated a focus on
             high-fidelity prototypes, allowing us to move swiftly from concept
-            to testable solution.
-          </p>
+            to testable solution."
+          />
         </div>
       </section>
       <section>
         <div className="px-48 mt-10">
-          <h3 className="text-5xl font-bold mb-2">Research & Insight</h3>
-          <p className="text-lg text-[#625D6F]">
-            Efficient logistics, freight forwarding, supply chain financing, and
+          <Title
+            text="Research & Insight"
+            subText=" Efficient logistics, freight forwarding, supply chain financing, and
             customs brokerage are crucial for moving goods across borders, yet
             they face significant challenges due to historical, economic,
             technological, and geopolitical factors. Before embarking on this
@@ -132,17 +130,22 @@ export default function AboutFaramove() {
             courier service market, focusing on understanding user perspectives
             and the industry's current issues. This groundwork helped me uncover
             the key dynamics contributing to these logistics and freight
-            problems.
-          </p>
+            problems."
+          />
         </div>
+        <div className="my-12">
+        <img className="container" src="/images/farapersons.png" alt={""} />
+
+        </div>
+
       </section>
       <section>
-        <div className="px-48 mt-10">
-          <h3 className="text-5xl font-bold mb-2  text-center">
+        <div className="mt-10">
+          <h3 className="text-5xl font-bold mb-2 flex-1 text-center">
             {" "}
             Competitors - Comparing Existing Competitors
           </h3>
-          <p className="text-lg text-[#625D6F]">
+          <p className="px-48 text-lg text-start">
             In collaboration with the Project Manager, competitive analysis of
             similar platforms was conducted. This research confirmed Faramove's
             strong potential to offer a unique value proposition in the market.
@@ -150,8 +153,8 @@ export default function AboutFaramove() {
         </div>
       </section>
 
-      <div className="mt-8 ">
-        <div className="flex justify-between mt-8 container">
+      <div className="pt-6">
+        <div className="flex justify-between container">
           <img className="w-[282px] h-[124px]" src="/images/gig.png" alt="" />
           <img
             className="w-[282px] h-[124px]"
@@ -222,3 +225,12 @@ const faraProduct: Array<{
     link: "https://x.com/FaramoveHq",
   },
 ];
+
+const Title = ({ text, subText }: { text?: string; subText: string }) => {
+  return (
+    <div>
+      <h1 className="text-[48px] title font-extrabold mb-3">{text}</h1>
+      <p className="text-lg">{subText}</p>
+    </div>
+  );
+};

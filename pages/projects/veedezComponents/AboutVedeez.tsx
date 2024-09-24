@@ -15,7 +15,7 @@ export default function AboutVeedez() {
         />
         <div className="space-y-6">
           <div>
-            <h3 className="text-2xl font-bold">My Role</h3>
+            <h3 className="text-2xl font-bold">My role</h3>
             <p className="text-lg">
               I developed the design system for both the first and second
               versions of this project and played a key role in crafting the
@@ -59,23 +59,19 @@ export default function AboutVeedez() {
             </article>
           ))}
         </section>
-        <div className="pt-12 ">
-          <h3 className="text-5xl font-bold mb-6">Veedez (V1) Component </h3>
-          <p className="text-lg text-[#625D6F]">
-            In the early stages of this project, I introduced a glassmorphism
+        <div className="pt-8">
+          <Title
+            text="Veedez (V1) Component"
+            subText="In the early stages of this project, I introduced a glassmorphism
             icon set, which was later refined and applied throughout the
             application. I also selected a clean, sans-serif typeface to enhance
             visual communication on digital screens, ensuring the colors met
-            accessibility standards.
-          </p>
+            accessibility standards."
+          />
         </div>
       </section>
       <div className="pb-6 container">
-        <img
-          src="/images/veedezcomp.png
-"
-          alt=""
-        />
+        <img src="/images/veedezcomp.png" alt="" />
       </div>
       <section>
         <div className="px-48 mt-10 mb-8">
@@ -138,8 +134,8 @@ const veedezProduct: Array<{
 const Title = ({ text, subText }: { text?: string; subText: string }) => {
   return (
     <div>
-      <h1 className="text-[48px] font-extrabold">{text}</h1>
-      <p className="text-[#625D6F] text-lg">{subText}</p>
+      <h1 className="text-[48px] title font-extrabold mb-3">{text}</h1>
+      <p className="text-lg">{subText}</p>
     </div>
   );
 };

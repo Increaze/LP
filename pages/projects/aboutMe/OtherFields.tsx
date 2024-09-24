@@ -1,6 +1,6 @@
 export default function OtherFields() {
   return (
-    <section className="space-y-12 container mb-12">
+    <section className="space-y-12 container pb-12">
       <div className="flex flex-col justify-center mt-10">
         <p className="text-sm font-medium text-center">
           Mentoring & Membership

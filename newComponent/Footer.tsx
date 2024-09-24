@@ -16,14 +16,14 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="pb-20 bg-la-gray4">
+    <footer className="py-20 bg-la-gray4">
       <section className="flex flex-col flex-1 justify-center">
-        <h5 className="text-5xl text-la-gray3 text-center font-medium container">
+        <h5 className="text-5xl text-la-gray3 text-start font-medium container title">
           Want to reach out about a project, collaboration or just want to say a
           friendly hello👋🏾?
         </h5>
         <div className="flex gap-3 items-center justify-center mt-5">
-          <span className="font-medium text-[80px]">Pixifinger1@gmail.com</span>
+          <span className="font-medium text-[80px] title">Pixifinger1@gmail.com</span>
         </div>
       </section>
       <div>
