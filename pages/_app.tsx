@@ -4,7 +4,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <main className="flex flex-col w-screen h-screen overflow-auto relative">
+    <main id="main" className="flex flex-col w-screen h-screen overflow-auto relative">
       <Head>
         <title>Abdul Lateef </title>
         <link rel="icon" href="/images/logo.svg" />

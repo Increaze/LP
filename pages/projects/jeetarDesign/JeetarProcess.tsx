@@ -73,15 +73,15 @@ export default function JeetarProcess() {
           className="block w-full mt-8 container"
         />
       </section>
-      <div className="px-4 py-12 relative">
-        <h1 className="text-[48px] font-medium">Next Project</h1>
-        <div className="relative group">
-          <Link href={"/projects/veedez"} className="cursor-pointer">
+      <Link href={"/projects/veedez"} className="cursor-pointer">
+        <div className="px-4 py-12 relative">
+          <h1 className="text-[48px] font-medium">Next Project</h1>
+          <div className="relative">
             <img className="" src="/images/veed.png" alt="" />
-          </Link>
-          <div className="absolute top-1/2 left-0 w-full h-[26px] bg-la-blue/90 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 ease-in-out origin-left -translate-y-1/2"></div>
+            <div className="absolute top-1/2 left-0 w-full h-[26px] bg-la-blue/90 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 ease-in-out origin-left -translate-y-1/2"></div>
+          </div>
         </div>
-      </div>
+      </Link>
     </section>
   );
 }
