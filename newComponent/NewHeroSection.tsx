@@ -7,13 +7,12 @@ export default function NewHeroSection() {
       <section className="flex justify-between gap-6">
         <div className="flex flex-col text-black p-6 border border-la-gray4 bg-la-gray4 flex-1 rounded-2xl w-[792px]">
           <div className="space-y-6">
-            <h1 className="text-[40px] font-bold  title">
-              Hey, I’m Lateef a product designer with 7 years of Experience
+            <h1 className="text-[40px] font-semibold  title max-w-[446px]">
+              I’m Lateef, a Technical + Product Designer
             </h1>
-            <p className="max-w-[630px]">
-              I’m a digital product designer who thrives on challenges and is
-              driven by the opportunity to create digital experiences that make
-              everyday life more human and enjoyable.
+            <p className="max-w-[702px] text-[#595959]">
+             With more 6 years of experience in crafting digital products across Fintech, Ecommerce, Web3, AI, SaaS, and Edtech,
+              I have ead product teams dedicated to enhancing product value and user experience.
             </p>
             <div className="flex gap-5 items-start text-xl">
               {skillSet.map((skill) => (

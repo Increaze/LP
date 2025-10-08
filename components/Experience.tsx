@@ -1,7 +1,7 @@
 export const Experience = () => {
   return (
     <section id="experience" className="mt-12 mb-20 container">
-      <h2 className="text-[32px] font-semibold leading-[56px] mb-4">
+      <h2 className="text-[55px] font-semibold leading-[56px] mb-24">
         Experiences
       </h2>
       <section className="grid items-start justify-evenly grid-cols-3 mbl:grid-cols-1 gap-8 mbl:gap-8">
@@ -32,24 +32,24 @@ const experiences: Array<{
   contractType?: string;
 }> = [
   {
-    company: "Alerzo",
-    role: "Senior Product Designer",
-    start: "May 2021",
-    end: "Till Date",
-    contractType: "Full-time",
-  },
-  {
-    company: `Alerzo - "Jeetar"`,
-    role: "Lead Product Designer",
-    start: "Aug  2021",
-    end: "Feb 2023",
-    contractType: "Full-time",
-  },
-  {
     company: "Faramove",
     role: "Product Designer",
     start: "January 2023",
-    end: "August 2023",
+    end: "Till Date",
+    contractType: "Contract",
+  },
+  {
+    company: "Alerzo",
+    role: "Senior Product Designer",
+    start: "May 2021",
+    end: "Sept 2024",
+    contractType: "Full-time",
+  },
+  {
+    company: "Rendize",
+    role: "Product Designer",
+    start: "January 2020",
+    end: "June 2021",
     contractType: "Contract",
   },
   {

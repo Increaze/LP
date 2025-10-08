@@ -28,13 +28,18 @@ export default function Footer() {
     <footer className="py-[70px] bg-la-gray4">
       <section className="flex flex-col items-start md:items-center justify-center px-4 md:px-10 lg:px-32 text-left md:text-center">
         <h5 className="text-3xl md:text-4xl lg:text-5xl text-la-gray3 font-medium title mb-4 text-start">
-          Want to reach out about a project, collaboration or just want to say a
-          friendly hello👋🏾?
+          Want to reach out about a project, collaboration or just want <br />{" "}
+          to say a friendly hello👋🏾?
         </h5>
-        <div className="flex flex-col md:flex-row gap-2 md:gap-3 items-start md:items-center justify-center mt-5">
-          <span className="font-medium text-2xl md:text-4xl lg:text-[80px] title">
-            Pixifinger1@gmail.com
-          </span>
+        <div className="flex flex-col md:flex-row gap-2 md:gap-3 items-start md:items-center justify-center mt-10">
+          <a
+            href="mailto:Pixifinger1@gmail.com"
+            className="font-medium text-2xl md:text-4xl lg:text-[80px] title hover:underline"
+                target="_blank"
+            rel="noreferrer noopener"
+          >
+            Get in Touch 
+          </a>
         </div>
       </section>
 
@@ -53,7 +58,7 @@ export default function Footer() {
         <div className="flex gap-4 md:gap-10 mt-4 md:mt-0">
           <a
             className="underline"
-            href="https://www.linkedin.com/in/lateef-akinyemi-432738127/"
+            href="https://www.linkedin.com/in/abdullateef-akinyemi"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -61,7 +66,7 @@ export default function Footer() {
           </a>
           <a
             className="underline"
-            href="https://drive.google.com/file/d/1nE-t_HTGFtPLxGkBtvdw6l5p5P892UTG/view?usp=sharing"
+            href="https://drive.google.com/file/d/12hmt5BxyBVE1PNwQadmTcLZAxJDmq_Pe/view?usp=sharing"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -70,7 +75,7 @@ export default function Footer() {
         </div>
         <button
           onClick={scrollToTop}
-          className="mt-4 md:mt-0 cursor-pointer underline bg-transparent border-none text-left p-0"
+          className="mt-4 md:mt-0 cursor-pointer bg-transparent border-none text-left p-0"
         >
           Back to top☝🏾☝🏾☝🏾︎
         </button>
