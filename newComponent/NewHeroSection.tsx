@@ -27,7 +27,7 @@ export default function NewHeroSection() {
           </div>
           <div className="flex items-center gap-5 mt-auto  mbl:flex-col mbl:gap-2 mbl:mt-14">
             <a
-              href="mailto:Pixifinger1@gmail.com"
+              href="mailto:akinyemilateefgbolahan@gmail.com"
               rel="noreferrer noopener"
               target="_blank"
               className="text-white px-4 py-2 rounded-full border border-black bg-black font-medium"

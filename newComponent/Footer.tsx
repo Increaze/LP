@@ -33,7 +33,7 @@ export default function Footer() {
         </h5>
         <div className="flex flex-col md:flex-row gap-2 md:gap-3 items-start md:items-center justify-center mt-10">
           <a
-            href="mailto:Pixifinger1@gmail.com"
+            href="mailto:akinyemilateefgbolahan@gmail.com"
             className="font-medium text-2xl md:text-4xl lg:text-[80px] title hover:underline"
                 target="_blank"
             rel="noreferrer noopener"
